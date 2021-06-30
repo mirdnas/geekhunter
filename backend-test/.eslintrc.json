@@ -1,0 +1,36 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+      "no-use-before-define": "off",
+			"@typescript-eslint/no-use-before-define": [
+				"error"
+			],
+	   	"import/extensions": [
+	      "error",
+	      "ignorePackages",
+	      {
+	        "ts": "never"
+	      }
+	    ]
+    },
+    "settings": {
+	    "import/resolver": {
+	      "typescript": {}
+	    }
+	  }
+}
